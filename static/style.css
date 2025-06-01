@@ -51,6 +51,7 @@
     place-content: center;
     column-gap: .5em;
     font-size: clamp(4rem, 6vw, 6vw); /* Make sure width of children is adapted to largest text */
+    padding: 20px 0px 20px 0px;
 }
 
 .header::before {
@@ -192,6 +193,10 @@
     background-image: url('images/bg-more.jpg');
 }
 
+.content-reviews::before {
+    background-image: url('images/bg-reviews.jpg');
+}
+
 .phone-section {
     display: flex;
     flex-direction: column;
@@ -226,7 +231,6 @@
 .description {
     font-family: var(--font-base), serif;
     font-size: 1.5rem;
-    font-weight: bold;
     color: rgb(var(--icon-primary));
     text-align: center;
     background-color: rgba(var(--bg-primary), 0.7);
@@ -238,6 +242,54 @@
     .phone-outer {
         width: min(100%, 300px);
     }
+}
+
+/* REVIEW SECTION */
+.content-reviews {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 2em;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-base), serif;
+    font-size: 1.5rem;
+    color: rgb(var(--icon-primary));
+    background-color: rgba(var(--bg-primary), 0.7);
+    border-radius: 20px;
+    padding: .5em;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.review-rating {
+    display: flex;
+    align-items: center;
+}
+
+.review-star {
+    color: orange;
+    font-size: 1.2em;
+}
+
+.review-subtitle {
+    font-weight: bold;
+    color: rgb(var(--text-highlight));
+}
+
+.review-body {
+    padding: 1em;
 }
 
 /* FOOTER */
